@@ -36,15 +36,7 @@ class Cards extends React.Component {
         ];
         this.setState({cards: result});
     }
-    /*changeText = id => {
-        const arr = this.state.cards;
-        const result = [
-            ...arr.slice(0, id),
-            {...arr[id], title: this.newTextHeader.value},
-            ...arr.slice(id+1)
-        ];
-        this.setState({cards: result});
-    }*/
+    
     changeText(id, newTitle) {
         const arr = this.state.cards;
         const result = [

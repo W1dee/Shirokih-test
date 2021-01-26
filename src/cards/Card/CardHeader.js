@@ -6,7 +6,6 @@ function CardHeader({title, cardId, editMode, changeCheck, changeMode, changeTex
     var newTextHeader = React.createRef();
 
     const tmpCh = () => {
-        //console.log(""+cardId+" "+title+" "+newTextHeader.value);
         changeText(cardId, newTextHeader.value);
     }
 

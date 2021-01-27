@@ -1,14 +1,13 @@
 import React from 'react';
 import {AiOutlineEdit, AiOutlineCheck, AiOutlineCloseCircle} from 'react-icons/ai'
 
-function CardHeader({title, cardId, editMode, changeCheck, changeMode, changeText, setNewText, ...props}) {
+function CardHeader({title, cardId, editMode, changeCheck, changeMode, changeText, setNewText, newTextHeader, tmpChange, ...props}) {
 
-    var newTextHeader = React.createRef();
+    /*var newTextHeader = React.createRef();
 
     const tmpCh = () => {
-        //console.log(""+cardId+" "+title+" "+newTextHeader.value);
         changeText(cardId, newTextHeader.value);
-    }
+    }*/
 
     return(
         <div className="cardHeader">
@@ -32,12 +31,12 @@ function CardHeader({title, cardId, editMode, changeCheck, changeMode, changeTex
                     <input 
                         className="input" 
                         defaultValue={title}
-                        ref={(ref) => {newTextHeader = ref;}}
+                        ref={(ref) => newTextHeader = ref}
                     />
                     <AiOutlineCheck
                         size="30px" 
                         style={{margin: "auto 0", marginLeft: "auto"}} 
-                        onClick={tmpCh}
+                        onClick={tmpChange}
                     />
                     <AiOutlineCloseCircle 
                         size="30px" 
